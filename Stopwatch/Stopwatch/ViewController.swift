@@ -40,8 +40,6 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target:self, selector:#selector(ViewController.updateTimeDisplay(_:)), userInfo:nil, repeats:true)
     }
     
-
-    
     func updateTimeDisplay(_ timer: Timer) {
         timeDisplay.text = currentWatch?.getTime()
     }
