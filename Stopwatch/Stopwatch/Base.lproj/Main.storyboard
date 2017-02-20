@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHU-7w-BrN">
+                                <rect key="frame" x="264" y="586" width="100" height="100"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="0.065431795061399733" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="TerminateWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxy-sr-mW7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMV-GQ-fPj">
+                                <rect key="frame" x="90" y="333" width="234" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stopwatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAb-7D-X9n">
+                                <rect key="frame" x="50" y="50" width="314" height="253"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH6-UJ-LuV">
+                                <rect key="frame" x="50" y="586" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Gon-H1-LFp"/>
+                                    <constraint firstAttribute="height" constant="100" id="JC5-je-0jx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.00019225223670860103" green="0.19715720933734227" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sdm-qA-021"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WH6-UJ-LuV" secondAttribute="bottom" constant="50" id="4oJ-ET-m54"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gHU-7w-BrN" secondAttribute="bottom" constant="50" id="5vj-As-ZWk"/>
+                            <constraint firstItem="DMV-GQ-fPj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bek-bf-Fgo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gHU-7w-BrN" secondAttribute="trailing" constant="30" id="HNf-fB-XtN"/>
+                            <constraint firstItem="WH6-UJ-LuV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Kie-0y-eue"/>
+                            <constraint firstItem="oAb-7D-X9n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Lgt-xW-8fg"/>
+                            <constraint firstItem="WH6-UJ-LuV" firstAttribute="width" secondItem="gHU-7w-BrN" secondAttribute="width" id="TRw-Kv-8yb"/>
+                            <constraint firstItem="DMV-GQ-fPj" firstAttribute="top" secondItem="oAb-7D-X9n" secondAttribute="bottom" constant="30" id="TSn-II-0yY"/>
+                            <constraint firstItem="oAb-7D-X9n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b9g-Yv-YDf"/>
+                            <constraint firstItem="DMV-GQ-fPj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cFc-yx-mVd"/>
+                            <constraint firstItem="oAb-7D-X9n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="dfn-Ee-LDp"/>
+                            <constraint firstItem="WH6-UJ-LuV" firstAttribute="height" secondItem="gHU-7w-BrN" secondAttribute="height" id="eAX-2k-0qz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oAb-7D-X9n" secondAttribute="trailing" constant="30" id="kYr-Re-TVX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="WH6-UJ-LuV" id="UnD-Zh-pnA"/>
+                        <outlet property="stopButton" destination="gHU-7w-BrN" id="zG4-vG-hS2"/>
+                        <outlet property="timeDisplay" destination="DMV-GQ-fPj" id="GYA-eT-ec2"/>
+                        <outlet property="watchLabel" destination="oAb-7D-X9n" id="Oga-0P-NDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
